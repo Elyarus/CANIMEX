@@ -1,0 +1,71 @@
+<!-- esto es un comentario  -->
+<!DOCTYPE html> <!--indica que todo el documento esta en html5--> 
+<html lang="es">
+    <!--etiqueta de configuraciones del navegador-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--es el titulo de la pagina donde estamos parados-->
+        <title>CANIMEX |Registro</title>
+        <!--el icono que represeta al sitio web y se ve en la pestaña-->
+        <link rel="shortcut icon" href="../assets/img/moon.png" type="image/x-icon">
+        <!--libreria de iconos de fontawesome-->
+        <script src="https://kit.fontawesome.com/31f30aea67.js" crossorigin="anonymous"></script>
+        <!--link externo de estilos de css-->
+        <link rel="stylesheet" href="../css/estilos_final.css">
+    </head>
+    <body class="bgRegistrarse">
+        <header class="headerRegis">
+            <nav>
+                    <a href="../index.html">  
+                        <i id="logoR" class="fa-solid fa-moon">
+                            <span class="moon"></span>
+                            <span class="logoText">Canimex</span>
+                        </i>
+                    </a>
+            </nav>
+        </header>
+        <main class="contenedorRegis">
+            <img src="../assets/img/paraRegistro-removebg-preview.png" alt="Registro" class="imagenRegistro">
+            <section id="registro">
+                <h1>Registro</h1>
+                <form action="valida.php" method="post">
+                <div>
+                    
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required> 
+                </div>
+                <div>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <div>
+                    <!-- <label for="nacimiento">Fecha de Nacimiento:</label> -->
+                    <input type="date" name="nacimiento" id="nacimiento" required>
+                </div>
+                <div>
+                    <select name="pais" id="pais" size="4">
+                        <option value="AR"selected>Argentina</option>
+                        <option value="PE">Peru</option>
+                        <option value="MX">Mexico</option>
+                        <option value="CL">Chile</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="terminos" for="termino">Acepta terminos y condiciones</label>
+                    <input type="checkbox" name="termino" id="termino">
+                </div>
+                <div>
+                    <input type="submit" value="Crear cuenta">
+                </div>
+            </form>
+                <a class="ayuda" href="#">Necesitas ayuda?</a>
+                
+            </section>
+        </main>
+    </body>
+</html>

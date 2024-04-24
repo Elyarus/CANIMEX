@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        @keyframes flotar{
+            0%{
+                transform: trasnlayeY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 30px;
+        }
+        .bolita{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: flotar 4s infinite ease-in-out;
+            
+        }
+        .rosa{
+            background-color: pink;
+        }
+        .amarilla{
+            background-color: yellow;
+            animation-delay: 0.2s;
+        }
+        .celeste{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+        <div class="bolita rosa"></div>
+        <div class="bolita amarilla"></div>
+        <div class="bolita celeste"></div>
+</body>
+</html>
