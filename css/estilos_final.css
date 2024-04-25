@@ -47,10 +47,6 @@
     }
 }
 @media screen and (max-width: 600px) {
-    .bgImgDet p{
-        padding: 20px; /* Reduce el relleno en pantallas más pequeñas */
-        font-size: 1.2rem;
-    }
     .puntuacion {
         font-size: 1rem; /* Reducir el tamaño del texto */
         margin-left: 17px;
@@ -82,8 +78,8 @@
         margin-top: 40px;
     }
     .bgImgDet p{
-        padding: 20px; /* Reduce el relleno en pantallas más pequeñas */
-        font-size: 1.3rem;
+        padding: 10px; /* Reduce el relleno en pantallas más pequeñas */
+        font-size: 1.2rem;
     }
     .container {
         flex-direction: column; /* Cambia la dirección del contenedor a columna */
