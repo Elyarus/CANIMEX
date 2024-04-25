@@ -70,6 +70,14 @@
         padding: 8px 12px; /* Reducir el tamaño de los botones */
         font-size: 0.8rem; /* Reducir el tamaño del texto de los botones */
     }
+    .tituloDt{
+        font-size: 1.5rem;
+        margin-top: 40px;
+    }
+    .bgImgDet p{
+        padding: 10px; /* Reduce el relleno en pantallas más pequeñas */
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 930px) {
