@@ -36,14 +36,10 @@
 
 @media screen and (max-width: 560px) {
     nav ul{
-        flex-wrap: wrap;
-        font-size: 1rem;
-        justify-content: flex-start;
+        flex-direction: column;
     }
     .imagenRegistro{
         width: 30%;
-        /* margin-left: 330px; */
-        /* margin-bottom: 160px; */
     }
 }
 @media screen and (max-width: 600px) {
@@ -66,7 +62,7 @@
     }
 
     .favoritos button {
-        margin: 10px 0; /* Añadir margen entre los botones en dispositivos móviles */
+        margin: 10px 0; /* Añadir margen entre los botones pantallas más pequeñas */
         padding: 8px 12px; /* Reducir el tamaño de los botones */
         font-size: 0.8rem; /* Reducir el tamaño del texto de los botones */
     }
@@ -113,12 +109,6 @@
     }
 }
 
-/* diseños responsive */
-
-
-/* p{
-    font-family: "DM Sans";
-} */
 /* estilos del body */
 body{
     background-color: #000;
@@ -146,11 +136,7 @@ body{
     font-size: 1rem;
     padding: none;
 }
-/* nav{
-    display:flex;
-    justify-content: flex-end;
-    flex-direction: row;
-}  */
+
 #logo:hover{
     color: white;
 }
@@ -175,9 +161,6 @@ hr{
 .moon {
     margin-right: 3px; /* Espacio entre la luna y el texto */
 }
-/* #logoR .moon{
-    margin-right: 1px;
-} */
 
 .logoText{
     vertical-align: middle;
@@ -185,21 +168,22 @@ hr{
 nav a{
     margin-left: 20px; /* Espacio entre los enlaces */
     text-decoration: none; /* Quita el subrayado de los enlaces */
-    color: #fafafa; /* Color del texto */
-    font-weight: bold; /* Estilo del texto */
+    color: #fafafa; 
+    font-weight: bold; 
 }
 
 /* Agregar sombra al pasar el mouse */
 nav a:hover {
     background-color: rgba(16, 3, 3, 0.071); /* Cambiar el color de fondo al pasar el mouse */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agregar una sombra al pasar el mouse */
-    transform: scale(1.1); /* Hacer que el enlace crezca al pasar el mouse */
+    transform: scale(1.1); /* aumenta el tamaño al pasar el mouse */
 }
 
 nav ul{
+    justify-content: center;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end; /*actua en el eje principal*/
+    /* flex-direction: row; */
+    /* justify-content: flex-end;  */
     align-items: center;  /* actua en el eje contrario al contenedor */
     list-style-type:none;
     padding: 0;
@@ -208,15 +192,15 @@ nav ul{
 
 .bgImg .botonRegis:hover{
     background-color: rgba(218, 115, 5, 0.934); /*cuando pasa el mouse cambia de color*/
-    transform: scale(1.1); /* Hacer que el enlace crezca al pasar el mouse */
+    transform: scale(1.1); /* aumenta el tamaño al pasar el mouse */
 }
 .bgImg .botonRegis{
     text-decoration: none; /* Quita el subrayado de los enlaces */
-    font-weight: bold; /* Estilo del texto */
-    background-color: orange; /* Fondo naranja */
+    font-weight: bold; /* negrita */
+    background-color: orange; 
     cursor: pointer; /* Cursor de tipo puntero */
-    transition: background-color 0.3s; /* Transición suave */
-    color: #fafafa; /*color del texto*/
+    transition: background-color 0.3s; 
+    color: #fafafa;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 200px;
@@ -230,17 +214,16 @@ nav ul{
 }
 .contenedorRegis form input[type="submit"] {
     text-decoration: none; /* Quita el subrayado de los enlaces */
-    font-weight: bold; /* Estilo del texto */
-    background-color: orange; /* Fondo naranja */
+    font-weight: bold; /* negrita */
+    background-color: orange; 
     cursor: pointer; /* Cursor de tipo puntero */
-    transition: background-color 0.3s; /* Transición suave */
-    color: #fafafa; /*color del texto*/
+    transition: background-color 0.3s;
+    color: #fafafa;
     border-radius: 10px;
     padding: 10px;
     font-size: 1rem;
 }
-/* sacar el sburayado a los hipervinculos y el cambio de color */
-/* estilos main del index */
+
 .bgImg{
     background: linear-gradient(to bottom, #000000ad, #000000ad), url(../assets/img/portada.jpg);
     background-repeat: no-repeat;
@@ -257,8 +240,6 @@ nav ul{
     overflow: hidden; /*todo el contenido que se desborde se oculta*/ 
     /* unidad relativa 1% viewport = 1vh */
     overflow: auto;
-    /* margin-inline: auto; para centrar un div tambien podemos usar margin: 0 auto */
-    /* box model */
 }
 .bgImg h1{
     font-weight: bold;
@@ -293,7 +274,7 @@ nav ul{
 .bgImgDet > * {
     margin-bottom: 20px; /*agrega margen inferior a los elementos hijos*/
 }
-
+/* imagen de fondo de la pag registro */
 .bgRegistrarse{
     background: linear-gradient(to bottom, #000000ad, #000000ad), url(../assets/img/bgRegistrarse.jpg);
     background-repeat: no-repeat;
@@ -402,10 +383,10 @@ nav ul{
 }
 
 .buscador form input[type="submit"] {
-    background-color: orange; /* Fondo naranja */
-    color: white; /* Texto blanco */
+    background-color: orange;
+    color: white; 
     cursor: pointer; /* Cursor de tipo puntero */
-    transition: background-color 0.3s; /* Transición suave */
+    transition: background-color 0.3s; 
     border: 2px solid white;
 }
 
@@ -424,10 +405,10 @@ nav ul{
     padding: 10px; /* Espaciado interno */
     margin: 10px; /* Margen exterior */
     border: 1px solid white;
-    background-color: orange; /* Fondo naranja */
-    color: white; /* Texto blanco */
+    background-color: orange; 
+    color: white; 
     cursor: pointer; /* Cursor de tipo puntero */
-    transition: background-color 0.3s; /* Transición suave */
+    transition: background-color 0.3s; 
 }
 
 .nextPrev:hover{
@@ -513,28 +494,23 @@ footer ul {
     padding: 0; /* Elimina el espaciado interno */
     display:flex;
     justify-content: center;
-    align-items: center;/* Centra los elementos de la lista */
+    align-items: center;
     column-gap: 20px;
 }
 
 footer ul li a {
     margin-left: 20px; /* Espacio entre los enlaces */
     text-decoration: none; /* Quita el subrayado de los enlaces */
-    color: #fafafa; /* Color del texto */
-    font-weight: bold; /* Estilo del texto */
+    color: #fafafa;
+    font-weight: bold; 
 }
 
 footer a{
     text-decoration: none; /* Quita el subrayado de los enlaces */
-    color: #fff; /* Color del texto */
+    color: #fff; 
 }
 
-.up-arrow{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-}
+
 
 .ayuda {
     padding: 5px; /* Espaciado interno del footer de registro */
@@ -562,6 +538,6 @@ footer a{
 /* Define el efecto de transformación y desenfoque al pasar el mouse sobre las imágenes */
 .contenedorImagenes img:hover {
     transform: scale(1.1); /* Agrandar la imagen al 110% de su tamaño original */
-    filter: grayscale(100%); /* Aplicar un desenfoque de 1px */
+    filter: grayscale(100%); /* Aplicar un tono blanco y negro a las imágenes*/
 }
 
