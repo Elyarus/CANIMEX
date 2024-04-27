@@ -32,15 +32,31 @@
     footer ul li {
         margin: 10px 0;
     }
-}
-
-@media screen and (max-width: 560px) {
     nav ul{
         flex-direction: column;
     }
 }
 
+
 @media screen and (max-width: 927px) and (max-height: 429px) {
+    .tituloDt{
+        font-size: 1.8rem;
+        margin-top: 40px;
+    }
+    .bgImgDet p{
+        padding: 10px; /* Reduce el relleno en pantallas más pequeñas */
+        font-size: 1.2rem;
+    }
+
+    .info {
+        width: 90%; /* Ajusta el ancho de los elementos al 90% */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 20px; /* Agrega un margen inferior para separar los elementos */
+        
+    }
+    .info strong{
+        font-size: 1.2rem;
+    }
     .imagenRegistro {
         max-width: 80%; /* Ajusta el ancho máximo al 80% del contenedor */
         height: auto; /* Permite que la altura se ajuste automáticamente */
@@ -96,42 +112,20 @@
     }
     .bgImgDet p{
         padding: 10px; /* Reduce el relleno en pantallas más pequeñas */
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 930px) {
-    .tituloDt{
-        font-size: 1.8rem;
-        margin-top: 40px;
-    }
-    .bgImgDet p{
-        padding: 10px; /* Reduce el relleno en pantallas más pequeñas */
         font-size: 1.2rem;
     }
+    .video iframe{
+        max-width: 100%;
+        height: auto; 
+        /* background-size: cover; */
+    } 
     .container {
         flex-direction: column; /* Cambia la dirección del contenedor a columna */
         align-items: center; /* Centra los elementos en el eje transversal */
         
     }
-    .video{
-        margin-bottom: 20px; /*Agrega un margen inferior para separar el video del contenido debajo*/
-        margin-right: 0; /*elimina el margen derecho para dar mas espacio al video*/
-    }
-    .video iframe{
-        width: 100%; /* Ajusta el ancho del video al 100%*/
-        height: auto; /*permite que la altura se ajuste*/
-    } 
-    .info {
-        width: 90%; /* Ajusta el ancho de los elementos al 90% */
-        margin-right: 0; /* Elimina el margen derecho */
-        margin-bottom: 20px; /* Agrega un margen inferior para separar los elementos */
-        
-    }
-    .info strong{
-        font-size: 1.2rem;
-    }
 }
+
 
 /* estilos del body */
 body{
@@ -369,14 +363,17 @@ nav ul{
     display: flex;
 }
 
-.video {
+.video{
     flex: 1;
-    margin-right: 20px; /* Espacio entre el video y la información */
+    margin-right: 20px;
     padding: 40px;
+    max-width: 100%;
+    overflow: auto;
 }
 .video iframe{
     height: 250px;
-    width: 100%;
+    width: 450px;
+
 } 
 
 .info {
