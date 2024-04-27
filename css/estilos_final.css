@@ -38,10 +38,34 @@
     nav ul{
         flex-direction: column;
     }
-    .imagenRegistro{
-        width: 30%;
+}
+
+@media screen and (max-width: 927px) and (max-height: 429px) {
+    .imagenRegistro {
+        max-width: 80%; /* Ajusta el ancho máximo al 80% del contenedor */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        margin-left: auto; /* Centra la imagen horizontalmente */
+        margin-right: auto; /* Centra la imagen horizontalmente */
+        margin-bottom: 20px; /* Ajusta el margen inferior para separarla de otros elementos */
+        max-height: 250px;
+    }
+    #registro {
+        width: 80%; /* ajusta el ancho del formulario en celulares girados a lo ancho*/
+        max-width: 360px; /*establece un ancho máximo*/
+        max-height: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #registro div{
+        width: 100%;
+        max-height: 25px;
+        padding: 12px;
+    }
+    #logoR {
+        margin-right: 100px;
     }
 }
+
 @media screen and (max-width: 600px) {
     .puntuacion {
         font-size: 1rem; /* Reducir el tamaño del texto */
@@ -130,7 +154,7 @@ body{
     color: rgba(218, 115, 5, 0.934);;
     align-items: center;
     justify-content: center;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 .terminos{
     font-size: 1rem;
@@ -519,6 +543,7 @@ footer a{
     background-color: none;
     text-decoration: none;
     color: #fafafa;
+    padding-top: 10px
 }
 
 .botRegistrarse{
