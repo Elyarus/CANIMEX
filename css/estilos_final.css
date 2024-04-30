@@ -77,8 +77,8 @@
         width: 80%; /* ajusta el ancho del formulario en celulares girados a lo ancho*/
         max-width: 360px; /*establece un ancho máximo*/
         max-height: 360px;
-        margin-left: auto;
-        margin-right: auto;
+        /* margin-left: auto;
+        margin-right: auto; */
     }
     #registro div{
         width: 100%;
@@ -125,7 +125,29 @@
     .video iframe{
         height: auto; 
         /* background-size: cover; */
-    } 
+    }
+    .imagenRegistro {
+        max-width: 80%; /* Ajusta el ancho máximo al 80% del contenedor */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        margin-left: auto; /* Centra la imagen horizontalmente */
+        margin-right: auto; /* Centra la imagen horizontalmente */
+        margin-bottom: 20px; /* Ajusta el margen inferior para separarla de otros elementos */
+        max-height: 250px;
+        margin-left: 150px;;
+        padding-left: 150px;
+    }
+    #registro {
+        width: 80%; /* ajusta el ancho del formulario en celulares girados a lo ancho*/
+        max-width: 360px; /*establece un ancho máximo*/
+        max-height: 360px;
+        /* margin-left: auto;
+        margin-right: auto; */
+    }
+    #registro div{
+        width: 100%;
+        max-height: 25px;
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 728px) {
@@ -327,7 +349,7 @@ nav ul{
     max-width: 150px;
     height: auto;
     display: block;
-    margin-left: 350px;
+    margin-left: 400px;
     /* margin-left: 330px; */
     /* margin-bottom: 160px; */
 }
