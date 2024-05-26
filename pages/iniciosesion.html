@@ -13,6 +13,8 @@
         <script src="https://kit.fontawesome.com/31f30aea67.js" crossorigin="anonymous"></script>
         <!--link externo de estilos de css-->
         <link rel="stylesheet" href="../css/estilos_final.css">
+        <!-- vincula archivo js para validar campos formulario -->
+        <script src="../js/validacion_inicio_sesion.js"></script>
     </head>
     <body class="bgRegistrarse">
         <header class="headerRegis">
@@ -29,12 +31,16 @@
             <img src="../assets/img/paraRegistro-removebg-preview.png" alt="Registro" class="imagenRegistro">
             <section id="registro">
             <h1>Iniciar sesión</h1>
-            <form action="" method="post">
+            <form action="" method="post" id="formularioInicioSesion">
                 <div>
                     <input type="email" id="email" name="email" placeholder="Email">
+                    <!-- mensaje de error para el campo de correo electronico -->
+                    <span id="email-error" class="error"></span>
                 </div>
                 <div>
                     <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <!-- Mensaje de error para el campo de contraseña -->
+                    <span id="password-error" class="error"></span>
                 </div>
                 <div>
                     <input type="submit" value="Iniciar sesión">

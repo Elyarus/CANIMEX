@@ -593,3 +593,7 @@ footer a{
     filter: grayscale(100%); /* Aplicar un tono blanco y negro a las imágenes*/
 }
 
+.error{
+    color: red;
+    font-size: 1rem;
+}
