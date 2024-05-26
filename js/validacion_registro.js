@@ -42,7 +42,7 @@ function validarRegistro() {
 }
 
 function soloLetras(texto) {
-    var regex = /^[a-zA-Z]+$/;
+    var regex = /^[a-zA-Z\s]+$/;
     return regex.test(texto);
 }
 
