@@ -13,6 +13,7 @@
         <script src="https://kit.fontawesome.com/31f30aea67.js" crossorigin="anonymous"></script>
         <!--link externo de estilos de css-->
         <link rel="stylesheet" href="../css/estilos_final.css">
+        <script src="validacion_registro.js"></script>
     </head>
     <body class="bgRegistrarse">
         <header class="headerRegis">
@@ -29,7 +30,7 @@
             <img src="../assets/img/paraRegistro-removebg-preview.png" alt="Registro" class="imagenRegistro">
             <section id="registro">
                 <h1>Registro</h1>
-                <form action="valida.php" method="post">
+                <form action="valida.php" method="post" onsubmit="return validarRegistro()">
                 <div>
                     
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre" required> 
