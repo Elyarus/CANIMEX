@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes Api</title>
+    <link rel="shortcut icon" href="../assets/img/moon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/31f30aea67.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        /* Estilos para las tarjetas de anime */
+        .anime-card {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+            background-color: black; /* Cambiar el color de fondo a negro */
+            color: white; /* Cambiar el color del texto a blanco */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .anime-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .anime-card .anime-details {
+            padding: 10px;
+        }
+
+        .anime-card h5 {
+            margin-top: 0;
+        }
+
+        .anime-card p {
+            margin-bottom: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* Estilos para el boton */
+        #button {
+            margin-bottom: 20px; /* Agrega margen inferior al botón */
+            text-decoration: none;
+            font-weight: bold; /* Negrita */
+            background-color: orange;
+            cursor: pointer; /* Cursor de tipo puntero */
+            transition: background-color 0.3s;
+            color: #fafafa;
+            border-radius: 10px;
+            padding: 10px 20px; /* Ajusta el padding para que sea similar al estilo del proyecto */
+            font-size: 1rem;
+        }
+
+        #button:hover {
+            background-color: rgba(218, 115, 5, 0.934); /* Cambia de color al pasar el mouse */
+            transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+        }
+
+        /* Estilos para las secciones */
+        .animes-section {
+            text-align: center; /* Alinear al centro para que las tarjetas estén centradas */
+        }
+
+        .fila-tarjetas {
+            display: flex;
+            justify-content: center; /* Alinear las filas de tarjetas al centro */
+            margin-bottom: 20px; /* Agregar margen inferior entre las filas */
+        }
+
+        .fila-tarjetas .anime-card {
+            margin-right: 10px; /* Ajustar el margen derecho entre las tarjetas */
+            margin-left: 10px; /* Ajustar el margen izquierdo entre las tarjetas */
+        }
+        .headerRegis{
+            text-align: center;
+        }
+        .headerRegis #logoR{
+            margin-top: 0px;
+            color: rgba(218, 115, 5, 0.934);;
+            font-size: 2rem;
+        }
+        #logoR:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="headerRegis">
+        <nav>
+            <a href="../index.html">  
+                <i id="logoR" class="fa-solid fa-moon">
+                    <span class="moon"></span>
+                    <span class="logoText">Canimex</span>
+                </i>
+            </a>
+    </nav>
+    </header>
+<div class="container">
+    <h1>Lista de Animes</h1>
+    <br>
+    <button id="button">Mostrar más</button>
+    <section id="animesSection" class="animes-section">
+        <!-- Aquí se agregarán las tarjetas de animes -->
+    </section>
+</div>
+<script>
+    // Función para crear una tarjeta de anime
+    function crearTarjetaAnime(anime) {
+        const card = document.createElement('div');
+        card.classList.add('anime-card');
+
+        // Agregar imagen del anime
+        const image = document.createElement('img');
+        image.src = anime.attributes.posterImage.small;
+        image.alt = anime.attributes.canonicalTitle;
+        card.appendChild(image);
+
+        // Agregar título del anime
+        const title = document.createElement('h5');
+        title.textContent = anime.attributes.titles.es || anime.attributes.canonicalTitle;
+        card.appendChild(title);
+
+        return card;
+    }
+
+    // URL base de la API de Kitsu
+    let API_URL = 'https://kitsu.io/api/edge/anime?page[limit]=10'; // Solicitar 10 animes
+
+    // Función para cargar los animes desde una URL específica
+    const cargarAnimesDesdeURL = async (url) => {
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+
+            const animes = data.data; // Extraer la lista de animes
+
+            const animesSection = document.getElementById('animesSection');
+            animesSection.innerHTML = ''; // Limpiar el contenido existente antes de agregar los nuevos animes
+
+            // Dividir los animes en filas de 5 tarjetas cada una
+            for (let i = 0; i < animes.length; i += 5) {
+                const fila = document.createElement('div');
+                fila.classList.add('fila-tarjetas');
+
+                // Mostrar hasta 5 tarjetas en cada fila
+                for (let j = i; j < i + 5 && j < animes.length; j++) {
+                    const animeCard = crearTarjetaAnime(animes[j]);
+                    fila.appendChild(animeCard);
+                }
+
+                animesSection.appendChild(fila);
+            }
+
+            // Actualizar la URL de la próxima página
+            API_URL = data.links.next;
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // Función para cargar la primera página de animes
+    const cargarPrimeraPagina = () => {
+        cargarAnimesDesdeURL(API_URL);
+    };
+
+    // Llamar a la función para cargar la primera página cuando el DOM esté cargado
+    document.addEventListener('DOMContentLoaded', () => {
+        cargarPrimeraPagina();
+    });
+
+    // Manejar el evento de clic en el botón "Mostrar más"
+    document.getElementById('button').addEventListener('click', () => {
+        //cargar la siguiente página cuando se haga clic en el botón
+        cargarAnimesDesdeURL(API_URL);
+    });
+</script>
+</body>
+</html>
