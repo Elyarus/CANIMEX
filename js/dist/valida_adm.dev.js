@@ -4,17 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("formAdm");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    var isValid = true; // Función para validar campo no vacío y no solo espacios
+    var valido = true; // Función para validar campo no vacío y no solo espacios
 
     function noVacio(str) {
       return str.trim().length > 0;
     } // Función para mostrar el error
 
 
-    function showError(element, message) {
-      alert(message);
+    function mostrarError(element, msg) {
+      alert(msg);
       element.style.borderColor = "red";
-      isValid = false;
+      valido = false;
     } // Función para limpiar el error
 
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clearError(titulo);
 
     if (!noVacio(titulo.value) || !titleRegex.test(titulo.value)) {
-      showError(titulo, "Ingrese un título válido.");
+      mostrarError(titulo, "Ingrese un título válido.");
     } // Validar Género
 
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clearError(genero);
 
     if (!noVacio(genero.value) || !genreRegex.test(genero.value)) {
-      showError(genero, "Ingrese un género válido.");
+      mostrarError(genero, "Ingrese un género válido.");
     } // Validar Editorial
 
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clearError(editorial);
 
     if (!noVacio(editorial.value) || !editorialRegex.test(editorial.value)) {
-      showError(editorial, "Ingrese una editorial válida.");
+      mostrarError(editorial, "Ingrese una editorial válida.");
     } // Validar Sinopsis
 
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clearError(sinopsis);
 
     if (!noVacio(sinopsis.value) || !synopsisRegex.test(sinopsis.value)) {
-      showError(sinopsis, "Ingrese una sinopsis válida.");
+      mostrarError(sinopsis, "Ingrese una sinopsis válida.");
     } // Validar Imagen
 
 
@@ -64,16 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
     clearError(imagen);
 
     if (imagen.files.length === 0) {
-      showError(imagen, "Debe subir al menos una imagen.");
+      mostrarError(imagen, "Debe subir al menos una imagen.");
     } else {
-      var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+      var formatosPermitidos = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-      if (!allowedExtensions.exec(imagen.files[0].name)) {
-        showError(imagen, "Solo se permiten archivos de imagen con extensiones .jpeg/.jpg/.png/.gif.");
+      if (!formatosPermitidos.exec(imagen.files[0].name)) {
+        mostrarError(imagen, "Solo se permiten archivos de imagen con extensiones .jpeg/.jpg/.png/.gif.");
       }
     }
 
-    if (isValid) {
+    if (valido) {
       alert("¡Anime ingresado correctamente!");
       form.reset(); // Limpiar los campos del formulario
     }
