@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador | Canimex</title>
+    <link rel="shortcut icon" href="../moon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/31f30aea67.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/estilos_final.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html">  
+            <i id="logo" class="fa-solid fa-moon">
+                <span class="moon"></span>
+                <span class="logoText">Canimex</span>
+            </i>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html#tendencias">Tendencias</a></li>
+                <li><a href="registrarse.html">Registrarse</a></li>
+                <li><a href="iniciosesion.html">Iniciar Sesión</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="tituloAdm">Gestión de Animes</h1>
+            <p class="parrafoAdm">En esta sección se podra llevar a cabo la gestión de animes del portal</p>
+            <form id="formAdm" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="titulo">Titulo</label>
+                    <input class="form-control" type="text" name="titulo" id="titulo">
+                </div>
+                <div>
+                    <label for="genero">Genero</label>
+                    <input class="form-control" type="text" name="genero" id="genero">
+                </div>
+                <div>
+                    <label for="editorial">Editorial</label>
+                    <input class="form-control" type="text" name="editorial" id="editorial">
+                </div>
+                <div>
+                    <label for="sinopsis">Sinopsis</label>
+                    <textarea name="sinopsis" class="form-control" id="sinopsis" cols="30" rows="3"></textarea>
+                </div>
+                <div>
+                    <label for="imagen">Imagen</label>
+                    <input class="form-control" type="file" name="imagen" id="imagen">
+                </div>
+                <div>
+                    <input id="agregarAnime" type="submit" value="Agregar Pelicula">
+                </div>
+            </form>
+            <script src="../js/valida_adm.js"></script>
+        </section>
+        <hr>
+        <section>
+            <h2 class="tituloAdm">Listado de Animes</h2>
+            <p class="parrafoAdm">Para ver todos los datos de los anime, elija uno y toque modificar</p>
+            <table id="tablaAnimes">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Imagen</th>
+                        <!-- <th>Editorial</th>
+                        <th>Sinopsis</th>  -->
+                        <th>Acciones</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>One Piece</td>
+                        <td>Aventura</td>
+                        <td><img src="../assets/img/one_piece.jpg" alt="One Piece" class="imgTabla"></td>
+                        <!-- <td>Shūeisha</td>
+                        <td>One Piece narra la historia de un joven llamado Monkey D. Luffy, que inspirado por su amigo pirata Shanks, comienza un viaje para alcanzar su sueño, ser el Rey de los piratas, para lo cual deberá encontrar el tesoro One Piece dejado por el anterior rey de los piratas Gol D. Roger.</td> -->
+                        <td>
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnModificar">Modificar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">Terminos y condiciones</a></li>
+            <li><a href="">Preguntas frecuentes</a></li>
+            <li><a href="">Ayuda</a></li>
+            <li><a href="administrador.html">Administrador</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
