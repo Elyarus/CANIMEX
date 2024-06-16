@@ -44,6 +44,22 @@
         width: 80%;
         padding: 10px;
     }
+    #formAdm{
+        padding: 15px;
+    }
+    #tablaAnimes {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    #tablaAnimes th{
+        display: none;
+    }
+    #tablaAnimes td {
+        display: block;
+        width: auto;
+        height: 100px;
+    }
 }
 
 
@@ -161,6 +177,7 @@
 body{
     background-color: #000;
     color: white;
+    font-family: "DM Sans", sans-serif;
 }
 /* estilos del header */
 .header{
@@ -629,17 +646,17 @@ footer a{
     margin-bottom: 25px;
 }
 
-form div {
+#formAdm div {
     margin-bottom: 15px;
 }
 
-label {
+#formAdm label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#formAdm input[type="text"], input[type="file"], textarea {
+#formAdm input[type="text"], #formAdm input[type="file"], #formAdm textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -648,9 +665,9 @@ label {
     color: white;
 }
 
-textarea {
+/* textarea {
     resize: vertical;
-}
+} */
 
 #agregarAnime {
     display: block;
@@ -721,9 +738,9 @@ tbody td {
 
 /* Ajuste de la tabla para no ocupar el 100% del ancho */
 #tablaAnimes {
-    width: 60%;
-    margin: 0 auto; /* Centrar la tabla */
-    margin-bottom: 30px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
 #tablaAnimes tbody tr {
@@ -731,8 +748,14 @@ tbody td {
     line-height: 150px; /* Centra verticalmente el contenido */
 }
 
-#tablaAnimes th, 
+#tablaAnimes th {
+    text-align: left;
+    
+}
+
+
 #tablaAnimes td {
     padding: 15px 10px; /* Ajusta el espaciado interno de las celdas */
     vertical-align: middle; /* Asegura que el contenido esté centrado verticalmente */
+    
 }
