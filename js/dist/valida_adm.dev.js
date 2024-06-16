@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("formAdm");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    var valido = true; // Función para validar campo no vacío y no solo espacios
+    var valido = true; // Función para validar que el campo no este vacio
 
     function noVacio(str) {
       return str.trim().length > 0;

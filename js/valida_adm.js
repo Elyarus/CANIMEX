@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let valido = true;
 
-        // Función para validar campo no vacío y no solo espacios
+        // Función para validar que el campo no este vacio
         function noVacio(str) {
             return str.trim().length > 0;
         }
