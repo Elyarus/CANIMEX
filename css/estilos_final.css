@@ -9,6 +9,7 @@
     padding: 0;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
+    box-sizing: border-box;
     /* font-size: 40px; */
     /* pixel es un valor absoluto(no cambia) */
 }
@@ -168,8 +169,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top:0;
+    /* position: sticky;
+    top:0; */
 }
 
 .headerRegis #logoR{
@@ -196,6 +197,11 @@ body{
     align-items: center;
     color: rgba(218, 115, 5, 0.934);
     font-size: 1.5rem;
+}
+#logo:hover, nav a:hover {
+    color: rgba(218, 115, 5, 0.934);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 hr{
     margin-left: 50px;
@@ -539,7 +545,6 @@ footer{
 }
 
 
-
 footer ul {
     list-style-type: none; /* Quita los puntos de la lista */
     padding: 0; /* Elimina el espaciado interno */
@@ -596,4 +601,138 @@ footer a{
 .error{
     color: red;
     font-size: 1rem;
+}
+
+
+.tituloAdm {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.parrafoAdm{
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+
+#formAdm{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formAdm input[type="text"], input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#agregarAnime {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#agregarAnime:hover {
+    background-color: rgba(218, 115, 5, 0.934);
+    transform: scale(1.05);
+}
+
+/* Estilos de la tabla */
+
+
+thead {
+    background-color: black;
+}
+
+thead th {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: black;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: black;
+}
+
+tbody td {
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Estilo para la imagen dentro de la tabla */
+.imgTabla {
+    height: 150px; /* Ancho fijo para la imagen */
+    width: auto; /* Ajusta la altura automáticamente */
+}
+
+/* Estilo para los botones dentro de la tabla */
+.btnEliminar, .btnModificar {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btnEliminar:hover, .btnModificar:hover {
+    background-color: rgba(218, 115, 5, 0.934);
+    transform: scale(1.1);
+}
+
+/* Ajuste de la tabla para no ocupar el 100% del ancho */
+#tablaAnimes {
+    width: 60%;
+    margin: 0 auto; /* Centrar la tabla */
+    margin-bottom: 30px;
+}
+
+#tablaAnimes tbody tr {
+    height: 200px; /* Ajusta la altura de cada fila */
+    line-height: 150px; /* Centra verticalmente el contenido */
+}
+
+#tablaAnimes th, 
+#tablaAnimes td {
+    padding: 15px 10px; /* Ajusta el espaciado interno de las celdas */
+    vertical-align: middle; /* Asegura que el contenido esté centrado verticalmente */
 }
