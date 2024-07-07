@@ -44,7 +44,7 @@
         width: 80%;
         padding: 10px;
     }
-    #formAdm{
+    #formNuevoAnime{
         padding: 15px;
     }
     #tablaAnimes {
@@ -636,7 +636,7 @@ footer a{
 }
 
 
-#formAdm{
+#formNuevoAnime{
     max-width: 600px;
     margin: 0 auto;
     background-color: #1a1a1a;
@@ -646,17 +646,17 @@ footer a{
     margin-bottom: 25px;
 }
 
-#formAdm div {
+#formNuevoAnime div {
     margin-bottom: 15px;
 }
 
-#formAdm label {
+#formNuevoAnime label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#formAdm input[type="text"], #formAdm input[type="file"], #formAdm textarea {
+#formNuevoAnime input[type="text"], #formNuevoAnime input[type="file"], #formNuevoAnime textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -737,18 +737,18 @@ tbody td {
 }
 
 /* Ajuste de la tabla para no ocupar el 100% del ancho */
-#tablaAnimes {
+#tableAnimes {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
 
-#tablaAnimes tbody tr {
+#tableAnimes tbody tr {
     height: 200px; /* Ajusta la altura de cada fila */
     line-height: 150px; /* Centra verticalmente el contenido */
 }
 
-#tablaAnimes th {
+#tableAnimes th {
     text-align: left;
     
 }

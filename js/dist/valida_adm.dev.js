@@ -1,7 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("formAdm");
+  var form = document.getElementById("formNuevoAnime");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     var valido = true; // Función para validar que el campo no este vacio

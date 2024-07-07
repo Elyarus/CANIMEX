@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("formAdm");
+    const form = document.getElementById("formNuevoAnime");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
