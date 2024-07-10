@@ -1,0 +1,1 @@
+{"version":3,"sources":["eliminar_anime.js"],"names":["document","addEventListener"],"mappings":";;AAAAA,QAAQ,CAACC,gBAAT,CAA0B,kBAA1B,EAA8C;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,CAA9C","sourcesContent":["document.addEventListener('DOMContentLoaded', async () => {\r\n    \r\n});\r\n"],"file":"eliminar_anime.dev.js"}

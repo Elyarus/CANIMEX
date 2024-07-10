@@ -29,8 +29,9 @@
         <section>
             <h1 class="tituloAdm">Gestión de Animes</h1>
             <p class="parrafoAdm">En esta sección se podrá llevar a cabo la gestión de animes del portal</p>
-            <form id="formNuevoAnime" action="" method="post" enctype="multipart/form-data">
+            <form id="formNuevoAnime" action="" method="post" enctype="multipart/form-data" class="row">
                 <div>
+                    <input class="form-control d-none" type="number" name="id" id="id">
                     <label for="titulo">Titulo</label>
                     <input class="form-control" type="text" name="titulo" id="titulo">
                 </div>
@@ -60,6 +61,7 @@
                 <thead>
                     <tr>
                         <!-- <th>Id</th> -->
+                         <th>ID Anime</th>
                         <th>Título</th>
                         <th>Género</th>
                         <th>Duración</th>
@@ -95,9 +97,7 @@
             <li><a href="administrador.html">Administrador</a></li>
         </ul>
     </footer>
-    <script src="../js/get_animes.js"></script>
-    <script src="../js/valida_adm.js"></script>
-    <script src="../js/post_anime.js"></script>
-    <script src="../js/botones.js"></script>
+    <script src="../js/get_modificar_delete_animes.js"></script>
+    <script src="../js/post_put_anime.js"></script>
 </body>
 </html>

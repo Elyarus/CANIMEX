@@ -253,9 +253,7 @@ nav a:hover {
 nav ul{
     justify-content: center;
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content: flex-end;  */
-    align-items: center;  /* actua en el eje contrario al contenedor */
+    align-items: center; 
     list-style-type:none;
     padding: 0;
     column-gap: 15px;
